@@ -107,11 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Imba.Forms.UI\Imba.Forms.UI.csproj">
-      <Project>{27ABEB25-888F-4BE1-B2B9-D1A4D59FBAF4}</Project>
+      <Project>{AE0640B1-92FE-4928-B6FF-EDAF4E7D5FC3}</Project>
       <Name>Imba.Forms.UI</Name>
     </ProjectReference>
     <ProjectReference Include="..\Imba.Core\Imba.Core.csproj">
-      <Project>{29070FAD-3B78-4C2E-BB74-BC2086AB4A61}</Project>
+      <Project>{F6F8D9E1-2B7F-4D87-A2F9-86CB030492AF}</Project>
       <Name>Imba.Core</Name>
     </ProjectReference>
   </ItemGroup>
