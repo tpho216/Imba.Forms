@@ -21,7 +21,7 @@ namespace Imba.Forms.UI.Droid
 
         protected override Task RunAppStartAsync(Bundle bundle)
         {
-            StartActivity(typeof(MainActivity));
+            StartActivity(typeof(RootViewActivity));
             return base.RunAppStartAsync(bundle);
         }
     }

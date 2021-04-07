@@ -9,8 +9,51 @@
 
      <ContentPage.Content>
             <StackLayout Margin="10" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-               <Label Text="HELLO" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+               <Label Text="HELLO WORLD" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+
+            <StackLayout Margin="20,45,20,10" Padding="0">
+                <StackLayout
+                    Margin="0"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="10">
+                    <BoxView Margin="0" HorizontalOptions="Start" />
+                    <Label
+                        Margin="0"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="MENU" />
+                    <ImageButton
+                        Margin="0"
+                        Padding="0,0,0,0"
+                        BackgroundColor="Transparent"
+                        HeightRequest="30"
+                        HorizontalOptions="End"
+                        IsEnabled="True"
+                        Source="close_button.png"
+                        VerticalOptions="StartAndExpand"
+                        WidthRequest="30" />
+                </StackLayout>
+
+                <Label
+                    Margin="0"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Hello">
+
+                </Label>
+                <Button
+                    Margin="0,10,0,10"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="LOG OUT"
+                    WidthRequest="150" />
             </StackLayout>
+      
+            </StackLayout>
+
+            
+
     </ContentPage.Content>
 
 </views:MvxContentPage>
