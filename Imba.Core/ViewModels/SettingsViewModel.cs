@@ -11,11 +11,16 @@ namespace Imba.Core.ViewModels
 
         public SettingsViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService) : base(logProvider, navigationService)
         {
-            ShowIoTViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<IoTViewModel>());
+            ShowIoTViewModelCommand = new MvxCommand(ShowIoTViewModel);
             _navigationService = navigationService;
         }
 
-        public IMvxAsyncCommand ShowIoTViewModelCommand { get; private set; }
+        public IMvxCommand ShowIoTViewModelCommand { get; private set; }
+
+        private void ShowIoTViewModel()
+        {
+            _navigationService.Navigate<IoTViewModel>();
+        }
 
     }
 }

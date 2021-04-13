@@ -35,16 +35,37 @@
                    >
 
                    <StackLayout Margin="20,45,20,10" Padding="0">
-                        <Label
-                            Margin="0"
-                            Text="Settings"
-                            Style="{StaticResource HeaderBoldLabelStyle}"
-                            FontSize="Title">
-                        </Label>
+
+                       <StackLayout
+                        Margin="0"
+                        Orientation="Horizontal"
+                        Spacing="10">
+                            <Label
+                                Text="Settings"
+                                TextTransform="Uppercase"
+                                Style="{StaticResource HeaderBoldLabelStyle}"
+                                FontFamily="ProximaNova-Bold"
+                                FontSize="Title"
+                                FontAttributes="Bold"
+                                >
+                            </Label>
+                            <ImageButton
+                                Margin="0"
+                                Padding="0,0,0,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                IsEnabled="True"
+                                Source="close_button.png"
+                                VerticalOptions="StartAndExpand"
+                                WidthRequest="30" />
+                        </StackLayout>
+                      
 
                        <Label
                            Margin="0"
                            Text="Logged in as:"
+                           FontAttributes="Bold"
                            FontSize="Default">
 
                        </Label>
@@ -57,18 +78,45 @@
                             ios:VisualElement.ShadowOffset="2,3"
                             ios:VisualElement.ShadowOpacity="0.6"
                             ios:VisualElement.ShadowRadius="3"
-                            Text="Seabin IoT Calibration"
-                            Command="{Binding ShowIoTViewModelCommand}">
+                            Text="SEABIN IoT CALIBRATION"
+                            FontAttributes="Bold"
+                            FontFamily="ProximaNova-Bold"
+                            Command="{mvx:MvxBind ShowIoTViewModelCommand}"
+                            Style="{StaticResource DefaultButtonStyle}"
+                            >
                 
                         </Button>
 
                         <Button
-                            Text="Change Password">
+                            Margin="0,10,0,10"
+                            android:VisualElement.Elevation="10"
+                            ios:VisualElement.IsShadowEnabled="true"
+                            ios:VisualElement.ShadowColor="Gray"
+                            ios:VisualElement.ShadowOffset="2,3"
+                            ios:VisualElement.ShadowOpacity="0.6"
+                            ios:VisualElement.ShadowRadius="3"
+                            Text="Change Password"
+                            TextTransform="Uppercase"
+                            FontAttributes="Bold"
+                            FontFamily="ProximaNova-Bold"
+                            Style="{StaticResource DefaultButtonStyle}"
+                           >
                 
                         </Button>
 
                        <Button
-                            Text="Logout">
+                            Margin="0,10,0,10"
+                            android:VisualElement.Elevation="10"
+                            ios:VisualElement.IsShadowEnabled="true"
+                            ios:VisualElement.ShadowColor="Gray"
+                            ios:VisualElement.ShadowOffset="2,3"
+                            ios:VisualElement.ShadowOpacity="0.6"
+                            ios:VisualElement.ShadowRadius="3"
+                            Text="Log out"
+                            TextTransform="Uppercase"
+                            FontAttributes="Bold"
+                            FontFamily="ProximaNova-Bold"
+                            Style="{StaticResource DefaultButtonStyle}">
                 
                         </Button>
 

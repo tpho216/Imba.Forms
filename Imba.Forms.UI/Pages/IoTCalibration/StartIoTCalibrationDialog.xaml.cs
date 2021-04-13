@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace Imba.Forms.UI.Pages.IoTCalibration
 {
-    [MvxModalPresentation(WrapInNavigationPage = false, NoHistory = false, Title = "IoT Calibration")]
+    [MvxModalPresentation(WrapInNavigationPage = false, NoHistory = false)]
     public partial class StartIoTCalibrationDialog : MvxContentPage<IoTViewModel>
     {
         public StartIoTCalibrationDialog()

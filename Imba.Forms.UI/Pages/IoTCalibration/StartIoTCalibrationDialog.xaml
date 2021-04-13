@@ -17,16 +17,12 @@
             </OnPlatform.Platforms>
         </OnPlatform>
          </views:MvxContentPage.BackgroundColor>
-     <ContentPage.Resources>
-        <ResourceDictionary>
-           
-          
-       
-        </ResourceDictionary>
-    </ContentPage.Resources>
+     
     <ContentPage.Content>
         <StackLayout>
+            <Button>
 
+            </Button>
 
                 
         </StackLayout>
