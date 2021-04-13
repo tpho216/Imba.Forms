@@ -1,63 +1,39 @@
 ﻿using System.Threading.Tasks;
-using MvvmCross.ViewModels;
+using MvvmCross.Commands;
+using MvvmCross.Logging;
+using MvvmCross.Navigation;
 
 namespace Imba.Core.ViewModels
 {
-    public class RootViewModel : MvxViewModel
+    public class RootViewModel : BaseNavigationViewModel
     {
+        private readonly IMvxNavigationService _navigationService;
 
-        public RootViewModel()
+        public RootViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService ) : base  (logProvider, navigationService)
         {
+            _navigationService = navigationService;
+            ShowSettingsViewModelCommand = new MvxCommand(ShowSettingsViewModels);
+
+        }
+        // MVVM Commands
+        public IMvxCommand ShowSettingsViewModelCommand { get; private set; }
+
+        public override Task Initialize()
+        {
+            return base.Initialize();
         }
 
-        public override async Task Initialize()
+        public override void Prepare()
         {
-            await base.Initialize();
-
-            SubTotal = 100;
-            Generosity = 10;
-            Recalculate();
+            base.Prepare();
         }
 
-        private double _subTotal;
-        public double SubTotal
+        // Private methods
+        private void ShowSettingsViewModels()
         {
-            get => _subTotal;
-            set
-            {
-                _subTotal = value;
-                RaisePropertyChanged(() => SubTotal);
-
-                Recalculate();
-            }
-        }
-
-        private int _generosity;
-        public int Generosity
-        {
-            get => _generosity;
-            set
-            {
-                _generosity = value;
-                RaisePropertyChanged(() => Generosity);
-
-                Recalculate();
-            }
-        }
-
-        private double _tip;
-        public double Tip
-        {
-            get => _tip;
-            set
-            {
-                _tip = value;
-                RaisePropertyChanged(() => Tip);
-            }
-        }
-
-        private void Recalculate()
-        {
+            _navigationService.Navigate<SettingsViewModel>();
         }
     }
 }
+
+    

@@ -8,5 +8,11 @@
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Services\" />
+      <Folder Include="Rest\" />
+      <Folder Include="Rest\Implementations\" />
+      <Folder Include="Rest\Interfaces\" />
+      <Folder Include="Services\Implementations\" />
+      <Folder Include="Services\Interfaces\" />
+      <Folder Include="DataModels\" />
     </ItemGroup>
 </Project>

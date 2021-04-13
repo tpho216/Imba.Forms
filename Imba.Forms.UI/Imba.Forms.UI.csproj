@@ -17,6 +17,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
+    <Folder Include="Pages\IoTCalibration\" />
+    <Folder Include="Fonts\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Imba.Core\Imba.Core.csproj" />

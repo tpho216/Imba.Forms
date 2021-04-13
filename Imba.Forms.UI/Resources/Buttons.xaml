@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Imba.Forms.UI.Resources.Buttons"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="ProximaNova-ExtraBold" />
+        <Setter Property="BorderRadius" Value="2" />
+    </Style>
+
+    <Style x:Key="RegularLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="ProximaNova-Regular" />
+    </Style>
+
+    <Style x:Key="BoldLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="ProximaNova-Bold" />
+    </Style>
+
+    <Style x:Key="HeaderBoldLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontFamily" Value="ProximaNova-Bold" />
+    </Style>
+
+    <Style x:Key="SubHeaderBoldLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="ProximaNova-Bold" />
+    </Style>
+
+    <Style x:Key="ItalicLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Italic" />
+        <Setter Property="FontFamily" Value="ProximaNova-RegularItalic" />
+    </Style>
+
+</ResourceDictionary>
