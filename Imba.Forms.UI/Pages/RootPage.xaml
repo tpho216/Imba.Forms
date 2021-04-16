@@ -8,9 +8,17 @@
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     x:TypeArguments="viewModels:RootViewModel"
     >
-
+    
     <ContentPage.Content>
-        <StackLayout Margin="20,55,20,10" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid
+            BackgroundColor="MediumPurple">
+             <StackLayout
+           
+            Margin="0"
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
             <Button
                 Command="{Binding ShowSettingsViewModelCommand}"
                 Text="Go to Settings"
@@ -22,5 +30,7 @@
             </Button>
 
         </StackLayout>
+        </Grid>
+       
     </ContentPage.Content>
 </views:MvxContentPage>

@@ -36,8 +36,8 @@
 
                        <StackLayout
                         Margin="0"
-                        Orientation="Horizontal"
-                        Spacing="10">
+                        Spacing="10"
+                        Orientation="Horizontal">
                             <Label
                                 Text="Settings"
                                 TextTransform="Uppercase"
@@ -45,6 +45,8 @@
                                 FontFamily="ProximaNova-Bold"
                                 FontSize="Title"
                                 FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
                                 >
                             </Label>
                             <ImageButton
@@ -52,11 +54,12 @@
                                 Padding="0,0,0,0"
                                 BackgroundColor="Transparent"
                                 HeightRequest="30"
-                                HorizontalOptions="End"
+                                HorizontalOptions="EndAndExpand"
                                 IsEnabled="True"
                                 Source="close_button.png"
                                 VerticalOptions="StartAndExpand"
-                                WidthRequest="30" />
+                                WidthRequest="30"
+                                Command="{Binding ExitViewModelsCommand}"/>
                         </StackLayout>
                       
 
@@ -69,7 +72,7 @@
                        </Label>
 
                         <Button
-                            Command="{Binding ShowIoTViewModelCommand}"
+                            Command="{Binding GoToStartIoTCalibrationVMCommand}"
                             Margin="0,10,0,10"
                             android:VisualElement.Elevation="10"
                             ios:VisualElement.IsShadowEnabled="true"

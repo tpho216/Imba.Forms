@@ -1,4 +1,5 @@
 ﻿using System;
+using Imba.Core.ViewModels.IoTCalibration;
 using MvvmCross.Commands;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
@@ -11,16 +12,24 @@ namespace Imba.Core.ViewModels
 
         public SettingsViewModel(IMvxLogProvider logProvider, IMvxNavigationService navigationService) : base(logProvider, navigationService)
         {
-            ShowIoTViewModelCommand = new MvxCommand(ShowIoTViewModel);
+            GoToStartIoTCalibrationVMCommand = new MvxCommand(GoToStartIoTCalibrationVM);
+            ExitViewModelsCommand = new MvxCommand(ExitViewModels);
+
             _navigationService = navigationService;
         }
 
-        public IMvxCommand ShowIoTViewModelCommand { get; private set; }
+        public IMvxCommand GoToStartIoTCalibrationVMCommand { get; private set; }
+        public IMvxCommand ExitViewModelsCommand { get; private set; }
 
-        private void ShowIoTViewModel()
+        private void GoToStartIoTCalibrationVM()
         {
-            _navigationService.Navigate<IoTViewModel>();
+            _navigationService.Close(this);
+            _navigationService.Navigate<StartIoTCalibrationViewModel>();
         }
 
+        private void ExitViewModels()
+        {
+            NavigationService.Close(this);
+        }
     }
 }
