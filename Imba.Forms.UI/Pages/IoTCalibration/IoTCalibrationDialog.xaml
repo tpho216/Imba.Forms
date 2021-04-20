@@ -69,7 +69,8 @@
                                 FontAttributes="Italic">
                             </Label>
 
-                           <BoxView
+                           <!--#region filler boxes for mock UI-->
+                           <!--<BoxView
                               Margin="0,10,0,0"
                               HeightRequest="100"
                               Color="White">
@@ -86,10 +87,75 @@
                               Margin="0,10,0,0"
                               HeightRequest="100"
                               Color="White">
-                           </BoxView>
+                           </BoxView>-->
+                           <!--#endregion-->
+                           <views:MvxListView
+                               x:Name="SensorListView"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Start"
+                               Margin="0,10,0,10"
+                               BackgroundColor="Transparent"
+                               ItemsSource="{mvx:MvxBind Sensors}"
+                               SelectionMode="None"
+                               SeparatorVisibility="None"
+                               HasUnevenRows="True"
+                               >
+                               <views:MvxListView.ItemTemplate>
+                                   <DataTemplate>
+                                       <views:MvxViewCell
+                                           x:Name="cell">
+                                           <StackLayout
+                                               Orientation="Vertical"
+                                               BackgroundColor="White"
+                                               HeightRequest="72"
+                                               >
+                                               <Label
+                                                    FontSize="Medium"
+                                                    HorizontalOptions="FillAndExpand"
+                                                    HorizontalTextAlignment="Center"
+                                                    VerticalOptions="FillAndExpand" 
+                                                    VerticalTextAlignment="Center"
+                                                    TextColor="Black"
+                                                    FontAttributes="Bold"
+                                                    mvx:Bi.nd="Text Name" >
+                                               </Label>
+
+                                               <Label
+                                                    FontSize="Micro"
+                                                    HorizontalOptions="FillAndExpand"
+                                                    HorizontalTextAlignment="Center"
+                                                    VerticalOptions="FillAndExpand" 
+                                                    VerticalTextAlignment="Start"
+                                                    TextColor="Black"
+                                                    Text="Stage 1/2"
+                                                    >
+                                                   
 
 
-                           
+                                               </Label>
+
+
+                                               <Label
+                                                    FontSize="Small"
+                                                    Margin="10,0,0,0"
+                                                    HorizontalOptions="Start"
+                                                    HorizontalTextAlignment="Start"
+                                                    VerticalOptions="Center" 
+                                                    VerticalTextAlignment="Center"
+                                                    TextColor="Black"
+                                                    Text="Reading in progress:"
+                                                    IsVisible="False"
+                                                   >
+
+
+
+                                               </Label>
+                                                   
+                                           </StackLayout>
+                                       </views:MvxViewCell>
+                                   </DataTemplate>
+                               </views:MvxListView.ItemTemplate>
+                           </views:MvxListView>
                        </StackLayout>
                </Frame>
         </StackLayout>

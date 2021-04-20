@@ -1,4 +1,7 @@
-﻿using Imba.Core.ViewModels;
+﻿using Imba.Core.Services.Implementations;
+using Imba.Core.Services.Interfaces;
+using Imba.Core.ViewModels;
+using MvvmCross;
 using MvvmCross.ViewModels;
 
 namespace Imba.Core
@@ -7,7 +10,9 @@ namespace Imba.Core
     {
         public override void Initialize()
         {
-            //Mvx.IoCProvider.RegisterType<ICalculationService, CalculationService>();
+            base.Initialize();
+
+            Mvx.IoCProvider.RegisterSingleton<IIoTHubService>(new IoTHubService());
 
             RegisterAppStart<RootViewModel>();
         }

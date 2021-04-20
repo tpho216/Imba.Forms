@@ -3,8 +3,8 @@ namespace Imba.Core.DataModels
 {
     public class Sensor 
     {
-        string Type { get; set; }
-        string Value { get; set; }
+        public string Name { get; set; }
+        public string Result { get; set; }
         
         public Sensor()
         {
