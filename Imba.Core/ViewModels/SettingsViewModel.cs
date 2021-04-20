@@ -29,7 +29,8 @@ namespace Imba.Core.ViewModels
 
         private void ExitViewModels()
         {
-            NavigationService.Close(this);
+            _navigationService.Close(this);
+            _navigationService.Navigate<ExitIoTCalibrationViewModel>();
         }
     }
 }

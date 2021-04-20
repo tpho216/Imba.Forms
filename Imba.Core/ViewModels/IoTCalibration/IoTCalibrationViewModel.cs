@@ -16,6 +16,7 @@ namespace Imba.Core.ViewModels.IoTCalibration
         {
             _navigationService = navigationService;
             ExitViewModelsCommand = new MvxCommand(ExitViewModels);
+            _navigationService.BeforeClose += (s, e) => handleAfterNavigate();
 
             //ShowIoTCalibrationViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<IoTCalibrationViewModel>());
         }
@@ -32,11 +33,16 @@ namespace Imba.Core.ViewModels.IoTCalibration
 
         private void ExitViewModels()
         {
-            NavigationService.Close(this);
+            _navigationService.Close(this);
+            _navigationService.Navigate<ExitIoTCalibrationViewModel>();
+            
         }
         // Private methods
 
-
+        private void handleAfterNavigate()
+        {
+            
+        }
 
     }
 }

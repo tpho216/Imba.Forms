@@ -33,14 +33,6 @@
                        <StackLayout
                                Margin="20,45,20,10" Padding="0">
 
-                            <Label 
-                                Margin="5"
-                                Text="Tap the checkbox beside each step once
-                                complete. For more information about each step tap the arrow to expand."
-                                FontSize="Small"
-                                FontAttributes="Italic">
-                            </Label>
-
                              <StackLayout
                                         Margin="0"
                                         Spacing="10"
@@ -66,7 +58,16 @@
                                                 VerticalOptions="StartAndExpand"
                                                 WidthRequest="30"
                                                 Command="{Binding ExitViewModelsCommand}"/>
+                                            
+                            
                                </StackLayout>
+                           <Label 
+                                Margin="5"
+                                Text="Tap the checkbox beside each step once
+                                complete. For more information about each step tap the arrow to expand."
+                                FontSize="Small"
+                                FontAttributes="Italic">
+                            </Label>
 
                            <BoxView
                               Margin="0,10,0,0"

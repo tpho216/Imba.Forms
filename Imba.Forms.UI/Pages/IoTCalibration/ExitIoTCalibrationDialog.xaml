@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:MvxContentPage
+    x:TypeArguments="viewModels:ExitIoTCalibrationViewModel"
+   xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Imba.Core.ViewModels.IoTCalibration;assembly=Imba.Core"
+    x:Class="Imba.Forms.UI.Pages.IoTCalibration.ExitIoTCalibrationDialog">
+
+    <views:MvxContentPage.BackgroundColor>
+        <OnPlatform x:TypeArguments="Color">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="#B3ffffff" />
+                <On Platform="Android" Value="#4Dffffff" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </views:MvxContentPage.BackgroundColor>
+
+    <ContentPage.Content>
+         <StackLayout Margin="0">
+                   <Frame
+                   Margin="0"
+                   Padding="0"
+                   BackgroundColor="#F7F7F7"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   OutlineColor="White"
+                   >
+                       <StackLayout
+                             Margin="20,45,20,10" Padding="0">
+                               <StackLayout
+                                        Margin="0"
+                                        Orientation="Vertical"
+                                        Spacing="10">
+                                        <Label
+                                            Text="EXIT IoT CALIBRATION"
+                                            Style="{StaticResource HeaderBoldLabelStyle}"
+                                            FontFamily="ProximaNova-Bold"
+                                            FontSize="Title"
+                                            FontAttributes="Bold"
+                                            >
+                                        </Label>
+
+                                        <Label 
+                                            Margin="5"
+                                            Text="Are you sure you want to exit the IoT Calibration? Exiting now will prevent any calibration metrics from being sent or registered against this Seabin."
+                                            FontSize="Small"
+                                            FontAttributes="Italic">
+                                        </Label>
+                                   <StackLayout Orientation="Horizontal">
+                                        <Button
+                                        Margin="0,10,0,10"
+                                        android:VisualElement.Elevation="10"
+                                        ios:VisualElement.IsShadowEnabled="true"
+                                        ios:VisualElement.ShadowColor="Gray"
+                                        ios:VisualElement.ShadowOffset="2,3"
+                                        ios:VisualElement.ShadowOpacity="0.6"
+                                        ios:VisualElement.ShadowRadius="3"
+                                        Text="Back"
+                                        TextTransform="Uppercase"
+                                        FontAttributes="Bold"
+                                        Style="{StaticResource DefaultButtonStyle}"
+                                        Command="{Binding BackToPreviousViewModelsCommand}"
+                                        >
+                            
+                                    </Button>
+
+                                   <Button
+                                        Margin="0,10,0,10"
+                                        android:VisualElement.Elevation="10"
+                                        ios:VisualElement.IsShadowEnabled="true"
+                                        ios:VisualElement.ShadowColor="Gray"
+                                        ios:VisualElement.ShadowOffset="2,3"
+                                        ios:VisualElement.ShadowOpacity="0.6"
+                                        ios:VisualElement.ShadowRadius="3"
+                                        Text="Exit"
+                                        TextTransform="Uppercase"
+                                        FontAttributes="Bold"
+                                        Style="{StaticResource DefaultButtonStyle}"
+                                        Command="{Binding ExitViewModelsCommand}"
+                                        >
+                            
+                                    </Button>
+
+
+                                   </StackLayout>
+                                  
+                               </StackLayout>
+                            
+                              
+                           
+                       </StackLayout>
+               </Frame>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</views:MvxContentPage>
